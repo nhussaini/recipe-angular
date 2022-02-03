@@ -14,6 +14,11 @@ export class RecipeListComponent implements OnInit {
       'This is simply a test',
       'https://i2.wp.com/mamaloli.com/wp-content/uploads/2011/08/bbqchicken-7.jpg?resize=960%2C640'
     ),
+    new Recipe(
+      'A test Recipe',
+      'This is simply a test',
+      'https://i2.wp.com/mamaloli.com/wp-content/uploads/2011/08/bbqchicken-7.jpg?resize=960%2C640'
+    ),
   ];
 
   constructor() {}
