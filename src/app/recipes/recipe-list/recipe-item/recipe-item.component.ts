@@ -12,7 +12,7 @@ export class RecipeItemComponent implements OnInit {
   // @Input() description: string;
   // @Input() imagePath: string;
   @Input() recipe: Recipe;
-  // @Output() recipeSelected = new EventEmitter<void>();
+  @Input() index: number;
 
   ngOnInit(): void {}
 }
