@@ -58,7 +58,7 @@ export class RecipeEditComponent implements OnInit {
       name: new FormControl(recipeName),
       imagePath: new FormControl(recipeImagePath),
       description: new FormControl(recipeDescription),
-      ingrediens: recipeIngredients,
+      ingredients: recipeIngredients,
     });
   }
 }
