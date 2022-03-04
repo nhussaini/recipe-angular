@@ -27,15 +27,16 @@ import { HeaderComponent } from './header/header.component';
 // import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
-import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
+// import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
 // import { AuthModule } from './auth/auth.module';
+import * as fromApp from './store/app.reducer';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ shoppingList: shoppingListReducer }),
+    StoreModule.forRoot(fromApp.appRedcuer),
     HttpClientModule,
     SharedModule,
     CoreModule,
