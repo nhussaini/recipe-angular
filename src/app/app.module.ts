@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { CoreModule } from './core.module';
 // import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
 // import { AuthModule } from './auth/auth.module';
 import * as fromApp from './store/app.reducer';
+import { AuthEffects } from './auth/store/auth.effects';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -37,6 +39,7 @@ import * as fromApp from './store/app.reducer';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(fromApp.appRedcuer),
+    EffectsModule.forRoot([AuthEffects]),
     HttpClientModule,
     SharedModule,
     CoreModule,
